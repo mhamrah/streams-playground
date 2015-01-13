@@ -11,5 +11,6 @@ object RabbitMqConsumer {
     Source(connection.consume("streams-playground"))
       .map(_.message.body.utf8String)
       .map(println(_))
+      .to(Sink.ignore)
   }
 }

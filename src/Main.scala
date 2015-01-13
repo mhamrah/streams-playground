@@ -8,5 +8,5 @@ object Main extends App {
   implicit val system = ActorSystem("flow-playground")
 
   implicit val flowMaterializer = FlowMaterializer()
-  RabbitMqConsumer.consume().runWith(Sink.ignore)
+  RabbitMqConsumer.consume().run()
 }
