@@ -7,9 +7,9 @@ import io.scalac.amqp._
 object RabbitMqConsumer {
   val connection = Connection()
 
-  def consume(implicit flowMaterializer: FlowMaterializer) = {
+  def consume() = {
     Source(connection.consume("streams-playground"))
       .map(_.message.body.utf8String)
-      .foreach(println(_))
+      .map(println(_))
   }
 }
