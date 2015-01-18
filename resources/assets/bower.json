@@ -1,0 +1,19 @@
+{
+  "name": "assets",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mhamrah/streams-playground",
+  "authors": [
+    "Michael Hamrah <m@hamrah.com>"
+  ],
+  "description": "assets frontend for rabbit streams sample.",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
