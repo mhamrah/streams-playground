@@ -55,6 +55,7 @@ libraryDependencies ++= Seq (
   // -- config --
   ,"com.typesafe" % "config" % "1.2.1"
   ,"io.scalac" %% "reactive-rabbit" % "0.2.2"
+  ,"de.heikoseeberger" %% "akka-sse" % "0.2.1"
 )
 
 /* you may need these repos */
@@ -62,6 +63,7 @@ resolvers ++= Seq(
   // Resolver.sonatypeRepo("snapshots")
   // Resolver.typesafeRepo("releases")
   //"spray repo" at "http://repo.spray.io"
+  "hseeberger at bintray" at "http://dl.bintray.com/hseeberger/maven"
 )
 
 fork := true

@@ -7,10 +7,8 @@ import io.scalac.amqp._
 object RabbitMqConsumer {
   val connection = Connection()
 
-  def consume(): RunnableFlow = {
+  def consume() = {
     Source(connection.consume("streams-playground"))
       .map(_.message.body.utf8String)
-      .map(println(_))
-      .to(Sink.ignore)
   }
 }
